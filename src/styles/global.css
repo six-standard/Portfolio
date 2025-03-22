@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Noto Sans";
+}
+
+@media print {
+  .page-break {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+  .page-break-always {
+    page-break-before: always;
+  }
+}
