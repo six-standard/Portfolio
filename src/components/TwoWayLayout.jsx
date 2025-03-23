@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TwoWayLayout = ({ icon, title, startDate, endDate, tabs, children }) => {
+export const TwoWayLayout = ({ icon, title, date, tabs, children }) => {
   return (
     <div className="flex gap-6 w-full">
       <div className="w-[225px] flex flex-col gap-4 shrink-0">
@@ -8,11 +8,7 @@ export const TwoWayLayout = ({ icon, title, startDate, endDate, tabs, children }
           {icon}
           <h2 className="text-[20px] font-bold">{title}</h2>
         </div>
-        {startDate && (
-          <span className="text-[17px] font-light text-gray-500">
-            {startDate} ~ {endDate ? endDate : "ONGOING"}
-          </span>
-        )}
+        {date && <span className="text-[17px] font-light text-gray-500">{date}</span>}
         {tabs?.map(({ icon, name, action }) => (
           <div className="flex gap-2 items-center" key={name}>
             {icon}

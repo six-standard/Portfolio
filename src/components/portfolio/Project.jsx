@@ -1,13 +1,12 @@
 import * as React from "react";
 import { TwoWayLayout } from "../TwoWayLayout";
 
-export const Project = ({ icon, name, banner, startDate, endDate, links, sections }) => {
+export const Project = ({ icon, name, banner, date, links, sections }) => {
   return (
     <TwoWayLayout
       title={name}
       icon={icon}
-      startDate={startDate}
-      endDate={endDate}
+      date={date}
       tabs={links.map(({ icon, name, href }) => ({
         icon,
         name,

@@ -15,3 +15,7 @@
     page-break-before: always;
   }
 }
+
+.hover_underline:hover {
+  text-decoration: underline;
+}

@@ -24,7 +24,7 @@ const IndexPage = () => {
         <Project
           icon={<Repo className="w-[30px] h-[30px]" />}
           name="REPO"
-          startDate="2024. 06"
+          date="2024. 06 ~ ONGOING"
           banner={
             <StaticImage
               src="../images/RepoBanner.png"
@@ -143,7 +143,7 @@ const IndexPage = () => {
               className="w-[657px] h-[350px]"
             />
           }
-          startDate="2024. 11"
+          date="2024. 11 ~ ONGOING"
           links={[
             {
               icon: <Github />,
@@ -176,11 +176,11 @@ const IndexPage = () => {
               content: (
                 <List
                   contents={[
-                    "NextJS - SEO 설정의 용이성, SSR을 통한 사용성 강화 등을 위해 선택",
-                    "Google Analytics & Sentry - 서비스 사용량 모니터링 및 버그의 빠른 탐지를 위해 선택",
-                    "Jest & MSW - 확장성이 높으며, 가장 범용적으로 쓰여 자료가 많았기 떄문에 선택",
-                    "Tanstack-Query & Fetch - Axios보다 커스텀이 쉬우며, NextJS과의 연동을 위해 선택",
-                    "React-ChartJS-2 - 오래된 만큼 거대한 커뮤니티와 안정성의 보장을 위해 선택",
+                    "**NextJS** - SEO 설정의 용이성, SSR을 통한 사용성 강화 등을 위해 선택",
+                    "**Google Analytics & Sentry** - 서비스 사용량 모니터링 및 버그의 빠른 탐지를 위해 선택",
+                    "**Jest & MSW** - 확장성이 높으며, 가장 범용적으로 쓰여 자료가 많았기 떄문에 선택",
+                    "**Tanstack-Query & Fetch** - Axios보다 커스텀이 쉬우며, NextJS과의 연동을 위해 선택",
+                    "**React-ChartJS-2** - 오래된 만큼 거대한 커뮤니티와 안정성의 보장을 위해 선택",
                   ]}
                 />
               ),
@@ -227,8 +227,7 @@ const IndexPage = () => {
           <span className="text-[26px] font-bold">활동</span>
           <TwoWayLayout
             title="대덕SW마이스터고 교내 해커톤"
-            startDate="2024. 07. 18"
-            endDate="2024. 07. 20"
+            date="2024. 07. 18 ~ 2024. 07. 20"
             tabs={[{ name: "우수상(3위)" }]}
           >
             <span className="w-full inline-block">
@@ -238,7 +237,7 @@ const IndexPage = () => {
               수상했습니다.
             </span>
           </TwoWayLayout>
-          <TwoWayLayout title="1일1코테" startDate="2025. 01. 12">
+          <TwoWayLayout title="1일1코테" date="2025. 01. 12 ~ ONGOING">
             <span className="w-full inline-block">
               코딩테스트 준비 목적과 함께 꾸준함을 만들기 위해, 매일 “백준 온라인 저지” 서비스에서
               코딩테스트를 진행하고 있습니다.
@@ -246,18 +245,14 @@ const IndexPage = () => {
             </span>
           </TwoWayLayout>
           <span className="text-[26px] font-bold">자격</span>
-          <TwoWayLayout
-            title="TOEIC 810점"
-            startDate="2023. 08. 11"
-            tabs={[{ name: "한국토익위원회" }]}
-          >
+          <TwoWayLayout title="TOEIC 810점" date="2023. 08. 11" tabs={[{ name: "한국토익위원회" }]}>
             <span className="w-full inline-block">
               외국인과 일상 수준의 대화가 가능하며, 영어 문서를 이해하거나 수정할 수 있습니다.
             </span>
           </TwoWayLayout>
           <TwoWayLayout
             title="PCCE 748점 (LV. 2)"
-            startDate="2024. 01. 05"
+            date="2024. 01. 05"
             tabs={[{ name: "프로그래머스" }]}
           >
             <span className="w-full inline-block">
@@ -266,7 +261,7 @@ const IndexPage = () => {
           </TwoWayLayout>
           <TwoWayLayout
             title="정보처리기능사"
-            startDate="2023. 11. 19"
+            date="2023. 11. 19"
             tabs={[{ name: "한국산업인력공단" }]}
           >
             <span className="w-full inline-block">
@@ -299,7 +294,6 @@ const IndexPage = () => {
         <Skillset
           title="🐙 Git & GitHub"
           contents={[
-            "Branch, Merge, Rebase 등의 Git 개념을 이해하고 있습니다.",
             "Branch, Merge, Rebase 등의 Git 개념을 이해하고 있습니다.",
             "Pull Request를 통해 코드 리뷰를 받고, 진행해 본 경험이 있습니다. ![실제 경험 →](https://github.com/Check-Data-Out/velog-dashboard-v2-fe/pull/25)",
             "Git Flow와 GIthub Flow의 차이점과 사용 방법을 이해하고 있습니다. ![학습 블로그 →](https://velog.io/@six-standard/브랜치-구조-깔끔하게-관리하기-플로우)",
