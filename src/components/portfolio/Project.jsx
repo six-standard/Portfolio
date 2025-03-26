@@ -10,7 +10,7 @@ export const Project = ({ icon, name, banner, date, links, sections }) => {
       tabs={links.map(({ icon, name, href }) => ({
         icon,
         name,
-        action: () => window.open(href),
+        action: href,
       }))}
     >
       {banner}

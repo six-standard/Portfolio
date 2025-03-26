@@ -13,9 +13,15 @@ export const TwoWayLayout = ({ icon, title, date, tabs, children }) => {
           <div className="flex gap-2 items-center" key={name}>
             {icon}
             {action ? (
-              <button onClick={action} className="text-[17px] font-medium hover:underline">
-                {name}
-              </button>
+              typeof action === "function" ? (
+                <button onClick={action} className="text-[17px] font-medium hover:underline">
+                  {name}
+                </button>
+              ) : (
+                <a href={action} className="text-[17px] font-medium hover:underline">
+                  {name}
+                </a>
+              )
             ) : (
               <span className="text-[17px] font-medium">{name}</span>
             )}
