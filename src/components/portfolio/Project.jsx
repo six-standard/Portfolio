@@ -4,6 +4,7 @@ import { TwoWayLayout } from "../TwoWayLayout";
 export const Project = ({ icon, name, banner, date, links, sections }) => {
   return (
     <TwoWayLayout
+      unbreakAble
       title={name}
       icon={icon}
       date={date}
@@ -14,9 +15,9 @@ export const Project = ({ icon, name, banner, date, links, sections }) => {
       }))}
     >
       {banner}
-      {sections?.map(({ title, content }) => (
-        <div className="flex flex-col gap-1 page-break">
-          <h2 className="font-bold text-[22px]">{title}</h2>
+      {sections?.map(({ title, content, breakAble = true }) => (
+        <div className={`flex flex-col gap-1 ${breakAble && "page-break"}`}>
+          <h2 className="H2">{title}</h2>
           {content}
         </div>
       ))}

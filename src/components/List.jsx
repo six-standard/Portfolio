@@ -7,7 +7,7 @@ export const List = ({ contents }) => {
         {items.map((i) =>
           typeof i === "string" ? (
             <li
-              className="w-full break-words"
+              className="w-full break-words SPAN leading-snug"
               dangerouslySetInnerHTML={{
                 __html: i
                   .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>")

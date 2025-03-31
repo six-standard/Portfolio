@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Layout, Introduce, Contacts, Project, Section, Skillset, List } from "../components";
+import { Layout, Contacts, Project, Section, Skillset, List } from "../components";
 import { Email, Github, Linkedin, Velog, Repo, Sample, VelogDashboard } from "../images";
 import { StaticImage } from "gatsby-plugin-image";
 import { TwoWayLayout } from "../components/TwoWayLayout";
@@ -9,8 +9,25 @@ const IndexPage = () => {
   return (
     <Layout className="my-[105px] print:my-[50px] w-[900px] flex flex-col gap-10">
       <Section>
-        <h1 className="text-[35px] font-black leading-none select-none">육기준</h1>
-        <Introduce />
+        <h1 className="H1 leading-none">육기준</h1>
+        <div className="flex flex-col gap-5">
+          <h2 className="H2">
+            사람들의 <span className="text-[#448F5E]">불편함</span>을 해결하기 위해 노력하는 FE
+            엔지니어입니다.
+          </h2>
+          <p className="SPAN font-normal leading-7">
+            사용자의 불편함을 해결하는 것을 핵심 가치로 두고 있습니다. <br />
+            더 나은 경험을 제공하기 위해 끊임없이 고민하고 개선합니다.
+            <br />
+            <br />
+            새로운 기술과 피드백을 열린 자세로 받아들이며, 지속적인 학습을 통해 시야를 넓힙니다.{" "}
+            <br />
+            또한 다른 사람들과 함께 지식을 공유하고 받아들이는 것을 선호합니다.
+            <br />
+            <br />
+            이러한 노력과 꾸준함이 저와 동료들의 성장에 도움이 될 수 있다고 믿습니다.
+          </p>
+        </div>
         <Contacts
           contents={[
             { icon: <Email />, href: "mailto:dbrrl1127@gmail.com", content: "dbrrl1127@gmail.com" },
@@ -24,7 +41,7 @@ const IndexPage = () => {
         <Project
           icon={<Repo className="w-[30px] h-[30px]" />}
           name="REPO"
-          date="2024. 06 ~ ONGOING"
+          date="2024. 06 ~ 2025. 01"
           banner={
             <StaticImage
               src="../images/RepoBanner.png"
@@ -49,14 +66,17 @@ const IndexPage = () => {
             {
               title: "개요",
               content: (
-                <span className="leading-7 text-[16px]">
+                <p className="SPAN leading-7">
                   대덕소프트마이스터고등학교 학생을 위한 이력서 관리 플랫폼입니다.
                   <br />
-                  학생들을 위한 손쉬운 이력서 작성 및 공유, 선생님들을 위한 빠른 피드백 및 레주메북
-                  변환 기능을 제공하며, 변환된 레주메북은 자체 뷰어를 통해 저희 학교와 MOU를 맺은
-                  기업들에게 제공됩니다. <br />
-                  작성 기간동안 <b>120+</b>명의 학생들의 이력서를 관리하였습니다.
-                </span>
+                  학생들을 위한 간단한 이력서 작성 기능, 선생님들을 위한 피드백 및 자동 변환 기능을
+                  제공하며, 변환된 레주메북은 온라인 뷰어를 통해 기업들에게 제공됩니다. <br />
+                  작성 기간동안{" "}
+                  <b>
+                    <ins>120+</ins>
+                  </b>
+                  명의 학생들의 이력서를 관리하였습니다.
+                </p>
               ),
             },
             {
@@ -64,10 +84,10 @@ const IndexPage = () => {
               content: (
                 <List
                   contents={[
-                    "**React** - 아직 지식이 부족한 NextJS에 비해 지식이 많으며 빠른 개발이 가능하여 선택",
-                    "**Yarn Workspace** - 공통 설정 파일과 UI 컴포넌트의 손쉬운 관리 및 적용을 위해 선택",
-                    "**React Hook Form & Zod** - 입력 렌더링 최적화 및 유지보수의 용이성을 위해 선택",
-                    "**Tanstack-Query & Axios** - 간편한 API 연동 및 낙관적 업데이트, 콜백 관리를 위해 선택",
+                    "**React** - 컴포넌트 기반 아키텍처로 유지보수성과 재사용성을 높이기 위해 선택",
+                    "**Yarn Workspace** - 설정 파일 및 디자인 시스템의 손쉬운 관리를 위해 선택",
+                    "**React Hook Form** - 입력 렌더링 최적화 및 유지보수의 용이성을 위해 선택",
+                    "**Tanstack-Query & Axios** - 낙관적 업데이트, 콜백 관리 등을 위해 선택",
                     "**React-PDF & jsPDF** - 간편한 PDF 렌더링 및 다운로드 기능을 위해 선택",
                   ]}
                 />
@@ -81,7 +101,7 @@ const IndexPage = () => {
                     "작성, 미리보기를 포함한 학생 서비스 개발",
                     "React-hook-form 라이브러리 도입",
                     [
-                      "복잡했던 입력 상태관리 코드 최적화",
+                      "useState 기반으로 Props Drilling이 발생하던 입력 코드 리팩토링",
                       "Zod 라이브러리를 위한 패턴 처리 중앙화",
                     ],
                     "Yarn Workspaces 기반 모노레포 설계 및 구현",
@@ -91,12 +111,11 @@ const IndexPage = () => {
             },
             {
               title: "트러블슈팅",
+              breakAble: false,
               content: (
                 <>
                   <div className="flex flex-col gap-1">
-                    <h3 className="font-semibold text-[18px]">
-                      낙관적 업데이트를 통한 사용자 경험 향상
-                    </h3>
+                    <h3 className="H3">낙관적 업데이트를 통한 사용자 경험 향상</h3>
                     <List
                       contents={[
                         "**원인**: 네트워크가 느려지거나 서버 부하로 인해 응답 시간이 길어질 경우, 사용자가 해당 글의 업데이트 반영을 늦게 확인하게 되는 불편함 발생",
@@ -105,10 +124,9 @@ const IndexPage = () => {
                       ]}
                     />
                   </div>
+                  <hr className="border-gray-300 my-2" />
                   <div className="flex flex-col gap-1">
-                    <h3 className="font-semibold text-[18px]">
-                      미리보기 PDF 다운로드시 Javascript 동작 멈춤
-                    </h3>
+                    <h3 className="H3">미리보기 PDF 다운로드시 Javascript 동작 멈춤</h3>
                     <List
                       contents={[
                         "**원인**: PDF 노드를 canvas를 통해 이미지 형태로 변환하는 html2canvas 라이브러리의 코드가 메인 스레드의 호출 스택을 오래 점유하여 변환하는 동안 쌓인 함수들의 실행이 지연되는 문제 발생",
@@ -117,11 +135,12 @@ const IndexPage = () => {
                       ]}
                     />
                   </div>
+                  <hr className="border-gray-300 my-2" />
                   <div className="flex flex-col gap-1">
-                    <h3 className="font-semibold text-[18px]">특정 운영체제에서의 PDF 화질 저하</h3>
+                    <h3 className="H3">특정 운영체제에서의 PDF 화질 저하</h3>
                     <List
                       contents={[
-                        "**원인**: 현재 사용중인 React-PDF의 DPI 값은 72 고정인데, Windows와 Linux에서는 기본 96 DPI를 사용하기 떄문에 운영체제의 DPI에 맞추기 위해 PDF가 뭉개져서 표시되는 문제 발생.",
+                        "**원인**: 현재 사용중인 React-PDF의 DPI 값은 72 고정인데, Windows와 Linux에서는 기본 96 DPI를 사용하기 때문에 운영체제의 DPI에 맞추기 위해 PDF가 뭉개져서 표시되는 문제 발생.",
                         "**해결 방법**: PDF Canvas의 Scale 값을 3으로 고정한 상황에서, CSS의 Transform Scale 옵션을 통해 크기를 원래대로 돌리면서 내부 픽셀을 압축하여 DPI를 강제로 올리는 방식으로 해결.",
                         "**배운 점**: 운영체제의 화면 표시 방식에 따라 페이지의 내용물이 다를 수 있다는 점과, 픽셀 압축에 대해서 배울 수 있었음.",
                       ]}
@@ -151,6 +170,11 @@ const IndexPage = () => {
               href: "https://github.com/Check-Data-Out/velog-dashboard-v2-fe",
             },
             {
+              icon: <Velog />,
+              name: "Logs →",
+              href: "https://velog.io/@six-standard/series/Velog-Dashboard-참여기",
+            },
+            {
               icon: <VelogDashboard className="w-[17px] h-[17px]" />,
               name: "Service →",
               href: "https://velog-dashboard.kro.kr/",
@@ -160,15 +184,31 @@ const IndexPage = () => {
             {
               title: "개요",
               content: (
-                <span className="leading-7 text-[16px]">
+                <p className="leading-7 SPAN">
                   통계 기능이 부실한 Velog를 위한 게시물 통계 대시보드 서비스입니다.
                   <br />
                   간편 통계 조회 기능을 제공하고 있으며, 추후 통계 리더보드와 비교, 타 블로그
                   서비스와의 연동을 준비할 계획입니다.
                   <br />
-                  현재 <b>200+</b>명의 유저들이 서비스를 사용하고 있으며, <b>20000+</b>개의 게시물의
-                  통계를 관리하고 있습니다.
-                </span>
+                  현재{" "}
+                  <ins>
+                    <b>200+</b>
+                  </ins>
+                  명의 유저들이 서비스를 사용하고 있으며,{" "}
+                  <ins>
+                    <b>20000+</b>
+                  </ins>
+                  개의 게시물의 통계를 관리하고 있습니다.
+                  <br />
+                  또한, 프로젝트 초기부터 배포까지의{" "}
+                  <a
+                    href="https://velog.io/@six-standard/series/Velog-Dashboard-참여기"
+                    className="hover:underline text-[#9ca3af] font-bold"
+                  >
+                    회고록
+                  </a>
+                  을 매주 작성하였습니다.
+                </p>
               ),
             },
             {
@@ -178,7 +218,9 @@ const IndexPage = () => {
                   contents={[
                     "**NextJS** - SEO 설정의 용이성, SSR을 통한 사용성 강화 등을 위해 선택",
                     "**Google Analytics & Sentry** - 서비스 사용량 모니터링 및 버그의 빠른 탐지를 위해 선택",
-                    "**Jest & MSW** - 확장성이 높으며, 가장 범용적으로 쓰여 자료가 많았기 떄문에 선택",
+                    "**Jest** - 터미널 내부에서 돌아가는 테스트와 NodeJS 백엔드와의 통합이 가능한 테스트라서 선택",
+                    "**MSW** - 반복된 Fetch 모킹을 줄이고, 재활용하기 용이한 모킹 API를 만들기 위해 선택",
+
                     "**Tanstack-Query & Fetch** - Axios보다 커스텀이 쉬우며, NextJS과의 연동을 위해 선택",
                     "**React-ChartJS-2** - 오래된 만큼 거대한 커뮤니티와 안정성의 보장을 위해 선택",
                   ]}
@@ -191,9 +233,12 @@ const IndexPage = () => {
                 <List
                   contents={[
                     "React 기반 확장 프로그램 개발",
-                    "협업 경험 개선",
-                    ["배포를 포함한 일부 개발 과정 문서화", "Discord 기반 화상 회의 도입"],
                     "채널톡 도입",
+                    [
+                      "사용자의 제보를 통한 빠른 버그, 배포 주기 문제 수집",
+                      "다른 사용자가 경험하기 전 문제 해결 가능",
+                    ],
+                    "Sentry 및 Google Analytics 도입",
                     [
                       "사용자의 제보를 통한 빠른 버그, 배포 주기 문제 수집",
                       "다른 사용자가 경험하기 전 문제 해결 가능",
@@ -206,7 +251,7 @@ const IndexPage = () => {
               title: "트러블슈팅",
               content: (
                 <div className="flex flex-col gap-1">
-                  <h3 className="font-semibold text-[18px]">
+                  <h3 className="H3">
                     계정 변경 시, 새로고침하면 사라지는 이전 계정의 데이터 표시
                   </h3>
                   <List
@@ -220,53 +265,106 @@ const IndexPage = () => {
               ),
             },
           ]}
-        ></Project>
+        />
       </Section>
-      <Section title="활동 및 자격" sliceInPrint>
+      <Section title="활동 및 자격">
         <div className="flex flex-col gap-8">
-          <span className="text-[26px] font-bold">활동</span>
+          <h3 className="H3">활동</h3>
+          <TwoWayLayout title="1일1코테" date="2025. 01. 12 ~ ONGOING">
+            <p className="w-full inline-block SPAN">
+              코딩테스트 준비 목적과 함께 꾸준함을 만들기 위해, 매일 “백준 온라인 저지” 서비스에서
+              코딩테스트를 진행하고 있습니다.
+              <br />
+              <a
+                href="https://solved.ac/profile/dbrrlwns_2"
+                className="hover:underline text-[#9ca3af] font-bold"
+              >
+                1월부터 꾸준히 진행
+              </a>
+              하고 있으며, 새로운 자료구조나 알고리즘을 학습하면{" "}
+              <a
+                href="https://github.com/six-standard/Study/tree/main/Engineer%20Brain/CS/Algorithm"
+                className="hover:underline text-[#9ca3af] font-bold"
+              >
+                TIL에 정리
+              </a>
+              하였습니다.
+            </p>
+          </TwoWayLayout>
           <TwoWayLayout
             title="대덕SW마이스터고 교내 해커톤"
             date="2024. 07. 18 ~ 2024. 07. 20"
             tabs={[{ name: "우수상(3위)" }]}
           >
-            <span className="w-full inline-block">
+            <p className="SPAN w-full inline-block">
               정치에 무관심하거나, 정보가 부족한 사람들을 위한 정치 SNS 플랫폼인 YEOYA(여야)
               서비스를 제작하였습니다.
-              <br /> 디자인과 프론트엔드 개발에 일부 참여하였으며, <b>우수상(3위)</b> 를
-              수상했습니다.
-            </span>
+              <br /> 디자인과 프론트엔드 개발에 일부 참여하였으며,{" "}
+              <ins>
+                <b>우수상(3위)</b>
+              </ins>{" "}
+              를 수상했습니다.
+            </p>
           </TwoWayLayout>
-          <TwoWayLayout title="1일1코테" date="2025. 01. 12 ~ ONGOING">
-            <span className="w-full inline-block">
-              코딩테스트 준비 목적과 함께 꾸준함을 만들기 위해, 매일 “백준 온라인 저지” 서비스에서
-              코딩테스트를 진행하고 있습니다.
-              <br /> 현재 <b>60일째</b> 진행중입니다.
-            </span>
+          <TwoWayLayout
+            title="Xquare 확장 프로그램 제작"
+            date="2023. 09. 28 ~ 2024. 03. 12"
+            tabs={[
+              {
+                icon: <Github />,
+                name: "Github →",
+                action: "https://github.com/five-standard/Xquare-Extension",
+              },
+              {
+                icon: (
+                  <StaticImage
+                    src="../images/Xquare.png"
+                    alt="아이콘 이미지"
+                    className="w-[18px] h-[18px]"
+                  />
+                ),
+                name: "Service →",
+                action:
+                  "https://chromewebstore.google.com/detail/xquare/apjpfknndginnahobenblkdfbibckcom?hl=ko",
+              },
+            ]}
+          >
+            <p className="SPAN w-full inline-block">
+              <b>(구)</b> 교내 학교생활 관리 서비스인 Xquare를 윈도우 환경에서 사용할 방법이 없어
+              직접 확장 프로그램을 개발하였습니다. 실제로 처음 불편함을 해결한 경험이며, 이 때부터
+              프론트엔드 엔지니어링에 집중하게 되었습니다.
+              <br />
+              <br />
+              현재는 서비스 종료되어 사용할 수 없으나,{" "}
+              <ins>
+                <b>20+</b>
+              </ins>
+              명의 교내 사용자를 확보하였습니다.
+            </p>
           </TwoWayLayout>
-          <span className="text-[26px] font-bold">자격</span>
+          <h3 className="H3">자격</h3>
           <TwoWayLayout title="TOEIC 810점" date="2023. 08. 11" tabs={[{ name: "한국토익위원회" }]}>
-            <span className="w-full inline-block">
+            <p className="SPAN w-full inline-block">
               외국인과 일상 수준의 대화가 가능하며, 영어 문서를 이해하거나 수정할 수 있습니다.
-            </span>
+            </p>
           </TwoWayLayout>
           <TwoWayLayout
             title="PCCE 748점 (LV. 2)"
             date="2024. 01. 05"
             tabs={[{ name: "프로그래머스" }]}
           >
-            <span className="w-full inline-block">
+            <p className="SPAN w-full inline-block">
               기초적인 알고리즘 및 자료구조 지식을 알고 있으며, 문제에 응용하여 적용할 수 있습니다.
-            </span>
+            </p>
           </TwoWayLayout>
           <TwoWayLayout
             title="정보처리기능사"
             date="2023. 11. 19"
             tabs={[{ name: "한국산업인력공단" }]}
           >
-            <span className="w-full inline-block">
+            <p className="SPAN w-full inline-block">
               기본적인 컴퓨터 지식을 이해하고 있으며, 산업기능요원 신청시 활용할 수 있습니다.
-            </span>
+            </p>
           </TwoWayLayout>
         </div>
       </Section>
@@ -317,11 +415,6 @@ const IndexPage = () => {
         <Skillset
           title="🍿 Other Stacks"
           contents={[
-            "**React Native**",
-            [
-              "WebView의 장단점을 이해하고 있으며, 실제 사용 경험이 있습니다",
-              "Animated의 interpolate, timing 등을 통한 다크/라이트 모드, 토글 메뉴 등을 구현해 본 경험이 있습니다.",
-            ],
             "**MonoRepo**",
             [
               "모노레포와 멀티레포의 차이점을 이해하고 있습니다.",
