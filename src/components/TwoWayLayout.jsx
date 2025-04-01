@@ -18,8 +18,8 @@ export const TwoWayLayout = ({
       <div className="w-[240px] flex flex-col gap-4 shrink-0">
         <div
           className={`flex gap-3 items-center ${
-            !noBackgroundStyle && "bg-gray-200"
-          } w-full shrink-0 px-2 py-1 H3 rounded-lg`}
+            !noBackgroundStyle && "bg-gray-200 px-2 py-1"
+          } w-full shrink-0  px-0 py-0 H3 rounded-lg`}
         >
           {icon}
           <h3 className="H3 font-bold">{title}</h3>
