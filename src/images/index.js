@@ -7,3 +7,4 @@ export { default as Sun } from "./sun.svg";
 export { default as Velog } from "./velog.svg";
 export { default as Repo } from "./repo.svg";
 export { default as VelogDashboard } from "./velogdashboard.svg";
+export { default as AC } from "./AC.svg";

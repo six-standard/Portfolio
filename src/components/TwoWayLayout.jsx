@@ -6,7 +6,7 @@ export const TwoWayLayout = ({ unbreakAble, icon, title, date, tabs, children })
       <div className="w-[250px] flex flex-col gap-4 shrink-0">
         <div className="flex items-center gap-4">
           {icon}
-          <h2 className="H2 font-bold leading-none">{title}</h2>
+          <h3 className="H3 font-bold leading-none">{title}</h3>
         </div>
         {date && <span className="SPAN font-light text-gray-500">{date}</span>}
         {tabs?.map(({ icon, name, action }) => (
@@ -28,7 +28,7 @@ export const TwoWayLayout = ({ unbreakAble, icon, title, date, tabs, children })
           </div>
         ))}
       </div>
-      <div className="w-full flex flex-col gap-4">{children}</div>
+      <div className="w-[638px] overflow-hidden flex flex-col gap-5">{children}</div>
     </div>
   );
 };

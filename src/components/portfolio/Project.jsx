@@ -15,10 +15,10 @@ export const Project = ({ icon, name, banner, date, links, sections }) => {
       }))}
     >
       {banner}
-      {sections?.map(({ title, content, breakAble = true }) => (
+      {sections?.map(({ title, content, breakAble = true }, index) => (
         <div className={`flex flex-col gap-1 ${breakAble && "page-break"}`}>
           <h2 className="H2">{title}</h2>
-          {content}
+          <div className="flex flex-col gap-4">{content}</div>
         </div>
       ))}
     </TwoWayLayout>

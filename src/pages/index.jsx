@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Layout, Contacts, Project, Section, Skillset, List } from "../components";
-import { Email, Github, Linkedin, Velog, Repo, Sample, VelogDashboard } from "../images";
+import { Email, Github, Linkedin, Velog, Repo, Sample, VelogDashboard, AC } from "../images";
 import { StaticImage } from "gatsby-plugin-image";
 import { TwoWayLayout } from "../components/TwoWayLayout";
 
@@ -101,7 +101,7 @@ const IndexPage = () => {
                     "작성, 미리보기를 포함한 학생 서비스 개발",
                     "React-hook-form 라이브러리 도입",
                     [
-                      "useState 기반으로 Props Drilling이 발생하던 입력 코드 리팩토링",
+                      "useState 기반으로 Props Drilling이 발생하던 입력 코드 리팩토링 ![실제 코드 →](https://github.com/DSM-Repo/repo/commit/70c8a101f0fa661d88e089c89b6209ae580310ea#diff-80f66ab5d30e7b48bd0159c53624b334ac9c4864fb88e5d9b1738371702140f4)",
                       "Zod 라이브러리를 위한 패턴 처리 중앙화",
                     ],
                     "Yarn Workspaces 기반 모노레포 설계 및 구현",
@@ -124,7 +124,6 @@ const IndexPage = () => {
                       ]}
                     />
                   </div>
-                  <hr className="border-gray-300 my-2" />
                   <div className="flex flex-col gap-1">
                     <h3 className="H3">미리보기 PDF 다운로드시 Javascript 동작 멈춤</h3>
                     <List
@@ -135,7 +134,6 @@ const IndexPage = () => {
                       ]}
                     />
                   </div>
-                  <hr className="border-gray-300 my-2" />
                   <div className="flex flex-col gap-1">
                     <h3 className="H3">특정 운영체제에서의 PDF 화질 저하</h3>
                     <List
@@ -268,105 +266,117 @@ const IndexPage = () => {
         />
       </Section>
       <Section title="활동 및 자격">
-        <div className="flex flex-col gap-8">
-          <h3 className="H3">활동</h3>
-          <TwoWayLayout title="1일1코테" date="2025. 01. 12 ~ ONGOING">
-            <p className="w-full inline-block SPAN">
-              코딩테스트 준비 목적과 함께 꾸준함을 만들기 위해, 매일 “백준 온라인 저지” 서비스에서
-              코딩테스트를 진행하고 있습니다.
-              <br />
-              <a
-                href="https://solved.ac/profile/dbrrlwns_2"
-                className="hover:underline text-[#9ca3af] font-bold"
-              >
-                1월부터 꾸준히 진행
-              </a>
-              하고 있으며, 새로운 자료구조나 알고리즘을 학습하면{" "}
-              <a
-                href="https://github.com/six-standard/Study/tree/main/Engineer%20Brain/CS/Algorithm"
-                className="hover:underline text-[#9ca3af] font-bold"
-              >
-                TIL에 정리
-              </a>
-              하였습니다.
-            </p>
-          </TwoWayLayout>
-          <TwoWayLayout
-            title="대덕SW마이스터고 교내 해커톤"
-            date="2024. 07. 18 ~ 2024. 07. 20"
-            tabs={[{ name: "우수상(3위)" }]}
-          >
-            <p className="SPAN w-full inline-block">
-              정치에 무관심하거나, 정보가 부족한 사람들을 위한 정치 SNS 플랫폼인 YEOYA(여야)
-              서비스를 제작하였습니다.
-              <br /> 디자인과 프론트엔드 개발에 일부 참여하였으며,{" "}
-              <ins>
-                <b>우수상(3위)</b>
-              </ins>{" "}
-              를 수상했습니다.
-            </p>
-          </TwoWayLayout>
-          <TwoWayLayout
-            title="Xquare 확장 프로그램 제작"
-            date="2023. 09. 28 ~ 2024. 03. 12"
-            tabs={[
-              {
-                icon: <Github />,
-                name: "Github →",
-                action: "https://github.com/five-standard/Xquare-Extension",
-              },
-              {
-                icon: (
-                  <StaticImage
-                    src="../images/Xquare.png"
-                    alt="아이콘 이미지"
-                    className="w-[18px] h-[18px]"
-                  />
-                ),
-                name: "Service →",
-                action:
-                  "https://chromewebstore.google.com/detail/xquare/apjpfknndginnahobenblkdfbibckcom?hl=ko",
-              },
-            ]}
-          >
-            <p className="SPAN w-full inline-block">
-              <b>(구)</b> 교내 학교생활 관리 서비스인 Xquare를 윈도우 환경에서 사용할 방법이 없어
-              직접 확장 프로그램을 개발하였습니다. 실제로 처음 불편함을 해결한 경험이며, 이 때부터
-              프론트엔드 엔지니어링에 집중하게 되었습니다.
-              <br />
-              <br />
-              현재는 서비스 종료되어 사용할 수 없으나,{" "}
-              <ins>
-                <b>20+</b>
-              </ins>
-              명의 교내 사용자를 확보하였습니다.
-            </p>
-          </TwoWayLayout>
-          <h3 className="H3">자격</h3>
-          <TwoWayLayout title="TOEIC 810점" date="2023. 08. 11" tabs={[{ name: "한국토익위원회" }]}>
-            <p className="SPAN w-full inline-block">
-              외국인과 일상 수준의 대화가 가능하며, 영어 문서를 이해하거나 수정할 수 있습니다.
-            </p>
-          </TwoWayLayout>
-          <TwoWayLayout
-            title="PCCE 748점 (LV. 2)"
-            date="2024. 01. 05"
-            tabs={[{ name: "프로그래머스" }]}
-          >
-            <p className="SPAN w-full inline-block">
-              기초적인 알고리즘 및 자료구조 지식을 알고 있으며, 문제에 응용하여 적용할 수 있습니다.
-            </p>
-          </TwoWayLayout>
-          <TwoWayLayout
-            title="정보처리기능사"
-            date="2023. 11. 19"
-            tabs={[{ name: "한국산업인력공단" }]}
-          >
-            <p className="SPAN w-full inline-block">
-              기본적인 컴퓨터 지식을 이해하고 있으며, 산업기능요원 신청시 활용할 수 있습니다.
-            </p>
-          </TwoWayLayout>
-        </div>
+        <TwoWayLayout title="TOEIC 785점" date="2023. 08. 11" tabs={[{ name: "한국토익위원회" }]}>
+          <p className="SPAN w-full inline-block">
+            외국인과 일상 수준의 대화가 가능하며, 영어 문서를 이해하거나 수정할 수 있습니다.
+          </p>
+        </TwoWayLayout>
+        <hr className="border-gray-300 border-[0.5px] border-dotted" />
+        <TwoWayLayout
+          title="PCCE 748점 (LV. 2)"
+          date="2024. 01. 05"
+          tabs={[{ name: "프로그래머스" }]}
+        >
+          <p className="SPAN w-full inline-block">
+            기초적인 알고리즘 및 자료구조 지식을 알고 있으며, 문제에 응용하여 적용할 수 있습니다.
+          </p>
+        </TwoWayLayout>
+        <hr className="border-gray-300 border-[0.5px] border-dotted" />
+        <TwoWayLayout
+          title="정보처리기능사"
+          date="2023. 11. 19"
+          tabs={[{ name: "한국산업인력공단" }]}
+        >
+          <p className="SPAN w-full inline-block">
+            기본적인 컴퓨터 지식을 이해하고 있으며, 산업기능요원 신청시 활용할 수 있습니다.
+          </p>
+        </TwoWayLayout>
+
+        <hr className="border-gray-300 border-[0.5px] border-dotted" />
+        <TwoWayLayout
+          title="마이스터고 교내 해커톤"
+          date="2024. 07. 18 ~ 2024. 07. 20"
+          tabs={[{ name: "우수상(3위)" }]}
+        >
+          <p className="SPAN w-full inline-block">
+            정치에 무관심하거나, 정보가 부족한 사람들을 위한 정치 SNS 플랫폼인 YEOYA(여야) 서비스를
+            제작하였습니다.
+            <br /> 디자인과 프론트엔드 개발에 일부 참여하였으며,{" "}
+            <ins>
+              <b>우수상(3위)</b>
+            </ins>{" "}
+            를 수상했습니다.
+          </p>
+        </TwoWayLayout>
+        <hr className="border-gray-300 border-[0.5px] border-dotted" />
+        <TwoWayLayout
+          title="1일1코테"
+          date="2025. 01. 12 ~ ONGOING"
+          tabs={[
+            {
+              icon: <AC />,
+              name: "Solved.ac →",
+              action: "https://solved.ac/profile/dbrrlwns_2",
+            },
+            {
+              icon: <Github />,
+
+              name: "TIL →",
+              action:
+                "https://github.com/six-standard/Study/tree/main/Engineer%20Brain/CS/Algorithm",
+            },
+          ]}
+        >
+          <p className="w-full inline-block SPAN">
+            코딩테스트 준비 목적과 함께 꾸준함을 만들기 위해, 매일 연습 문제들을 풀고 있습니다.
+            <br />
+            1월부터 꾸준히 진행 하고 있으며, 새로운 자료구조나 알고리즘을 학습하면{" "}
+            <a
+              href="https://github.com/six-standard/Study/tree/main/Engineer%20Brain/CS/Algorithm"
+              className="hover:underline text-[#9ca3af] font-bold"
+            >
+              TIL에 정리
+            </a>
+            하였습니다.
+          </p>
+        </TwoWayLayout>
+        <hr className="border-gray-300 border-[0.5px] border-dotted" />
+        <TwoWayLayout
+          title="Xquare 확장 프로그램 제작"
+          date="2023. 09. 28 ~ 2024. 03. 12"
+          tabs={[
+            {
+              icon: <Github />,
+              name: "Github →",
+              action: "https://github.com/five-standard/Xquare-Extension",
+            },
+            {
+              icon: (
+                <StaticImage
+                  src="../images/Xquare.png"
+                  alt="아이콘 이미지"
+                  className="w-[18px] h-[18px]"
+                />
+              ),
+              name: "Service →",
+              action:
+                "https://chromewebstore.google.com/detail/xquare/apjpfknndginnahobenblkdfbibckcom?hl=ko",
+            },
+          ]}
+        >
+          <p className="SPAN w-full inline-block">
+            <b>(구)</b> 교내 학교생활 관리 서비스인 Xquare를 윈도우 환경에서 사용할 방법이 없어 직접
+            확장 프로그램을 개발하였습니다. 실제로 처음 불편함을 해결한 경험이며, 이 때부터
+            프론트엔드 엔지니어링에 집중하게 되었습니다.
+            <br />
+            <br />
+            현재는 서비스 종료되어 사용할 수 없으나,{" "}
+            <ins>
+              <b>20+</b>
+            </ins>
+            명의 교내 사용자를 확보하였습니다.
+          </p>
+        </TwoWayLayout>
       </Section>
       <Section title="기술 스택">
         <Skillset
@@ -384,6 +394,7 @@ const IndexPage = () => {
             ],
           ]}
         />
+        <hr className="border-gray-300 border-[0.5px] border-dotted" />
         <Skillset
           title="🖥️ ReactJS"
           contents={[
@@ -392,6 +403,7 @@ const IndexPage = () => {
             "React-Hook-Form, Zod를 통해 안정적인 유효성 검증 시스템을 구현해본 경험이 있습니다.",
           ]}
         />
+        <hr className="border-gray-300 border-[0.5px] border-dotted" />
         <Skillset
           title="💻 NextJS"
           contents={[
@@ -404,6 +416,7 @@ const IndexPage = () => {
             ],
           ]}
         />
+        <hr className="border-gray-300 border-[0.5px] border-dotted" />
         <Skillset
           title="🐙 Git & GitHub"
           contents={[
@@ -412,6 +425,7 @@ const IndexPage = () => {
             "Git Flow와 GIthub Flow의 차이점과 사용 방법을 이해하고 있습니다. ![학습 블로그 →](https://velog.io/@six-standard/브랜치-구조-깔끔하게-관리하기-플로우)",
           ]}
         />
+        <hr className="border-gray-300 border-[0.5px] border-dotted" />
         <Skillset
           title="🍿 Other Stacks"
           contents={[
