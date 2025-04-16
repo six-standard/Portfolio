@@ -11,16 +11,14 @@ const IndexPage = () => {
         <h1 className="H1 leading-none">육기준</h1>
         <div className="flex flex-col gap-5">
           <h2 className="H2">
-            사람들의 <span className="text-[#448F5E]">불편함</span>을 해결하기 위해 노력하는 FE
-            엔지니어입니다.
+            사람들의 <span className="text-[#448F5E]">불편함</span>을 해결하기 위해 노력하는 FE 엔지니어입니다.
           </h2>
           <p className="SPAN font-normal leading-7">
             사용자의 불편함을 해결하는 것을 핵심 가치로 두고 있습니다. <br />
             더 나은 경험을 제공하기 위해 끊임없이 고민하고 개선합니다.
             <br />
             <br />
-            새로운 기술과 피드백을 열린 자세로 받아들이며, 지속적인 학습을 통해 시야를 넓힙니다.{" "}
-            <br />
+            새로운 기술과 피드백을 열린 자세로 받아들이며, 지속적인 학습을 통해 시야를 넓힙니다. <br />
             또한 다른 사람들과 함께 지식을 공유하고 받아들이는 것을 선호합니다.
             <br />
             <br />
@@ -41,13 +39,7 @@ const IndexPage = () => {
           icon={<Repo className="w-[30px] h-[30px]" />}
           name="REPO"
           date="2024. 06 ~ 2025. 01"
-          banner={
-            <StaticImage
-              src="../images/RepoBanner.png"
-              alt="배너 이미지"
-              className="w-[638px] h-[350px] rounded-xl"
-            />
-          }
+          banner={<StaticImage src="../images/RepoBanner.png" alt="배너 이미지" className="w-[638px] h-[350px] rounded-xl" />}
           links={[
             { icon: <Github />, name: "Github →", href: "https://github.com/DSM-Repo/repo" },
             {
@@ -68,8 +60,7 @@ const IndexPage = () => {
                 <p className="break-words break-keep SPAN leading-7">
                   대덕소프트마이스터고등학교 학생을 위한 이력서 관리 플랫폼입니다.
                   <br />
-                  학생들을 위한 간단한 이력서 작성 기능, 선생님들을 위한 피드백 및 자동 변환 기능을
-                  제공하며, 변환된 레주메북은 온라인 뷰어를 통해 기업들에게 제공됩니다. <br />
+                  학생들을 위한 간단한 이력서 작성 기능, 선생님들을 위한 피드백 및 자동 변환 기능을 제공하며, 변환된 레주메북은 온라인 뷰어를 통해 기업들에게 제공됩니다. <br />
                   작성 기간동안{" "}
                   <b>
                     <ins>120+</ins>
@@ -119,9 +110,9 @@ const IndexPage = () => {
                     <h3 className="H3">미리보기 PDF 다운로드시 Javascript 동작 멈춤</h3>
                     <List
                       contents={[
-                        "**원인**: PDF 노드를 canvas를 통해 이미지 형태로 변환하는 html2canvas 라이브러리의 코드가 메인 스레드의 호출 스택을 오래 점유하여 변환하는 동안 쌓인 함수들의 실행이 지연되는 문제 발생",
-                        "**해결 방법**: canvas 변환 코드를 별도 스레드에서 동작하는 Web Worker로 옮기고, 메시지를 통해 blob 형태로 변환된 이미지 값을 받는 식으로 수정하여 해결.",
-                        "**배운 점**: Web Worker의 개념과 동작 방식, 메인 스레드가 실제로 오래 점유될 경우에 어떤 일이 발생하는지에 대해 배울 수 있었음.",
+                        "**원인**: base64 형태의 이미지를 PDF에 추가하는 jsPDF 라이브러리의 코드가 메인 스레드의 호출 스택을 오래 점유하여 변환하는 동안 쌓인 함수들의 실행이 지연되는 문제 발생",
+                        "**해결 방법**: jsPDF의 PDF 변환 코드를 스레드에서 동작하는 Web Worker로 옮기고, 메시지를 통해 blob 형태로 변환된 PDF 파일을 받는 식으로 수정하여 해결.",
+                        "**배운 점**: Web Worker의 개념과 동작 방식, Blob 개념, 메인 스레드가 실제로 오래 점유될 경우에 어떤 일이 발생하는지에 대해 배울 수 있었음.",
                       ]}
                     />
                   </div>
@@ -144,13 +135,7 @@ const IndexPage = () => {
           icon={<VelogDashboard className="w-[30px] h-[30px]" />}
           name="Velog Dashboard"
           smallTitle
-          banner={
-            <StaticImage
-              src="../images/VDBanner.png"
-              alt="배너 이미지"
-              className="w-[638px] h-[350px] rounded-xl"
-            />
-          }
+          banner={<StaticImage src="../images/VDBanner.png" alt="배너 이미지" className="w-[638px] h-[350px] rounded-xl" />}
           date="2024. 11 ~ ONGOING"
           links={[
             {
@@ -176,8 +161,7 @@ const IndexPage = () => {
                 <p className="break-words break-keep leading-7 SPAN">
                   통계 기능이 부실한 Velog를 위한 게시물 통계 대시보드 서비스입니다.
                   <br />
-                  간편 통계 조회 기능을 제공하고 있으며, 추후 통계 리더보드와 비교, 타 블로그
-                  서비스와의 연동을 준비할 계획입니다.
+                  간편 통계 조회 기능을 제공하고 있으며, 추후 통계 리더보드와 비교, 타 블로그 서비스와의 연동을 준비할 계획입니다.
                   <br />
                   현재{" "}
                   <ins>
@@ -190,10 +174,7 @@ const IndexPage = () => {
                   개의 게시물의 통계를 관리하고 있습니다.
                   <br />
                   또한, 프로젝트 초기부터 배포까지의{" "}
-                  <a
-                    href="https://velog.io/@six-standard/series/Velog-Dashboard-참여기"
-                    className="hover:underline text-[#9ca3af] font-bold"
-                  >
+                  <a href="https://velog.io/@six-standard/series/Velog-Dashboard-참여기" className="hover:underline text-[#9ca3af] font-bold">
                     회고록
                   </a>
                   을 매주 작성하였습니다.
@@ -222,15 +203,9 @@ const IndexPage = () => {
                   contents={[
                     "React 기반 확장 프로그램 개발",
                     "채널톡 도입",
-                    [
-                      "사용자의 제보를 통한 빠른 버그, 배포 주기 문제 수집",
-                      "다른 사용자가 경험하기 전 문제 해결 가능",
-                    ],
+                    ["사용자의 제보를 통한 빠른 버그, 배포 주기 문제 수집", "다른 사용자가 경험하기 전 문제 해결 가능"],
                     "Sentry 및 Google Analytics 도입",
-                    [
-                      "사용자의 제보를 통한 빠른 버그, 배포 주기 문제 수집",
-                      "다른 사용자가 경험하기 전 문제 해결 가능",
-                    ],
+                    ["사용자의 제보를 통한 빠른 버그, 배포 주기 문제 수집", "다른 사용자가 경험하기 전 문제 해결 가능"],
                   ]}
                 />
               ),
@@ -239,9 +214,7 @@ const IndexPage = () => {
               title: "트러블슈팅",
               content: (
                 <div className="flex flex-col gap-1">
-                  <h3 className="H3">
-                    계정 변경 시, 새로고침하면 사라지는 이전 계정의 데이터 표시
-                  </h3>
+                  <h3 className="H3">계정 변경 시, 새로고침하면 사라지는 이전 계정의 데이터 표시</h3>
                   <List
                     contents={[
                       "**원인**: NextJS의 Full-Route Cache 외에도 클라이언트에서 동작하는 RSC Router Cache가 있는데, 해당 캐시를 제거하지 않아 새로고침시 사라지는 이전 데이터가 표시됨",
@@ -257,27 +230,14 @@ const IndexPage = () => {
       </Section>
       <Section title="활동 및 자격" sliceInPrint>
         <TwoWayLayout title="TOEIC 785점" date="2023. 08. 11" tabs={[{ name: "한국토익위원회" }]}>
-          <p className="SPAN w-full inline-block break-words break-keep">
-            외국인과 일상 수준의 대화가 가능하며, 영어 문서를 적절히 이해합니다.
-          </p>
+          <p className="SPAN w-full inline-block break-words break-keep">외국인과 일상 수준의 대화가 가능하며, 영어 문서를 적절히 이해합니다.</p>
         </TwoWayLayout>
-        <TwoWayLayout
-          title="정보처리기능사"
-          date="2023. 11. 19"
-          tabs={[{ name: "한국산업인력공단" }]}
-        >
-          <p className="SPAN w-full inline-block break-words break-keep">
-            기본적인 컴퓨터 지식을 이해하고 있으며, 병역특례시 활용할 수 있습니다.
-          </p>
+        <TwoWayLayout title="정보처리기능사" date="2023. 11. 19" tabs={[{ name: "한국산업인력공단" }]}>
+          <p className="SPAN w-full inline-block break-words break-keep">기본적인 컴퓨터 지식을 이해하고 있으며, 병역특례시 활용할 수 있습니다.</p>
         </TwoWayLayout>
-        <TwoWayLayout
-          title="마이스터고 교내 해커톤"
-          date="2024. 07. 18 ~ 2024. 07. 20"
-          tabs={[{ name: "우수상(3위)" }]}
-        >
+        <TwoWayLayout title="마이스터고 교내 해커톤" date="2024. 07. 18 ~ 2024. 07. 20" tabs={[{ name: "우수상(3위)" }]}>
           <p className="SPAN w-full inline-block break-words break-keep">
-            정치에 무관심하거나, 정보가 부족한 사람들을 위한 정치 SNS 플랫폼인 YEOYA(여야) 서비스를
-            제작하였습니다.
+            정치에 무관심하거나, 정보가 부족한 사람들을 위한 정치 SNS 플랫폼인 YEOYA(여야) 서비스를 제작하였습니다.
             <br />
             <br /> 디자인과 프론트엔드 개발에 일부 참여하였으며,{" "}
             <ins>
@@ -294,8 +254,7 @@ const IndexPage = () => {
               icon: <Github />,
 
               name: "TIL →",
-              action:
-                "https://github.com/six-standard/Study/tree/main/Engineer%20Brain/CS/Algorithm",
+              action: "https://github.com/six-standard/Study/tree/main/Engineer%20Brain/CS/Algorithm",
             },
             {
               icon: <AC />,
@@ -309,10 +268,7 @@ const IndexPage = () => {
             <br />
             <br />
             1월부터 꾸준히 진행하고 있으며, 새로운 자료구조나 알고리즘을 학습하면{" "}
-            <a
-              href="https://github.com/six-standard/Study/tree/main/Engineer%20Brain/CS/Algorithm"
-              className="hover:underline text-[#9ca3af] font-bold whitespace-nowrap"
-            >
+            <a href="https://github.com/six-standard/Study/tree/main/Engineer%20Brain/CS/Algorithm" className="hover:underline text-[#9ca3af] font-bold whitespace-nowrap">
               TIL에 정리
             </a>
             하였습니다.
@@ -328,25 +284,16 @@ const IndexPage = () => {
               action: "https://github.com/five-standard/Xquare-Extension",
             },
             {
-              icon: (
-                <StaticImage
-                  src="../images/Xquare.png"
-                  alt="아이콘 이미지"
-                  className="w-[18px] h-[18px]"
-                />
-              ),
+              icon: <StaticImage src="../images/Xquare.png" alt="아이콘 이미지" className="w-[18px] h-[18px]" />,
               name: "Service →",
-              action:
-                "https://chromewebstore.google.com/detail/xquare/apjpfknndginnahobenblkdfbibckcom?hl=ko",
+              action: "https://chromewebstore.google.com/detail/xquare/apjpfknndginnahobenblkdfbibckcom?hl=ko",
             },
           ]}
         >
           <p className="SPAN w-full inline-block break-words break-keep">
-            (구) 교내 학교생활 관리 서비스인 Xquare를 윈도우 환경에서 사용할 방법이 없어 직접 확장
-            프로그램 형태의 보조 클라이언트를 개발하였습니다.
+            (구) 교내 학교생활 관리 서비스인 Xquare를 윈도우 환경에서 사용할 방법이 없어 직접 확장 프로그램 형태의 보조 클라이언트를 개발하였습니다.
             <br />
-            실제로 처음 불편함을 해결한 경험이며, 이 때부터 프론트엔드 엔지니어링에 집중하게
-            되었습니다.
+            실제로 처음 불편함을 해결한 경험이며, 이 때부터 프론트엔드 엔지니어링에 집중하게 되었습니다.
             <br />
             <br />
             현재는 서비스 종료되어 사용할 수 없으나,{" "}
@@ -363,10 +310,7 @@ const IndexPage = () => {
             contents={[
               "Tanstack-Query에서 Typescript를 통한 Type-Safe 서버 데이터 관리 경험이 있습니다.",
               "Mapped Type, Utility Type, Generic과 같은 특수 타입을 이해하고 있으며, 응용할 수 있습니다.",
-              [
-                "Generic Type을 사용하여 코드의 확장성을 높인 경험이 있습니다.",
-                "Utility Type을 이용하여 인터페이스의 재활용성을 높인 경험이 있습니다.",
-              ],
+              ["Generic Type을 사용하여 코드의 확장성을 높인 경험이 있습니다.", "Utility Type을 이용하여 인터페이스의 재활용성을 높인 경험이 있습니다."],
             ]}
           />
         </TwoWayLayout>
@@ -398,15 +342,7 @@ const IndexPage = () => {
           />
         </TwoWayLayout>
         <TwoWayLayout title="🍿 Other Stacks">
-          <List
-            contents={[
-              "**MonoRepo**",
-              [
-                "모노레포와 멀티레포의 차이점을 이해하고 있습니다.",
-                "Yarn Workspaces 기반 모노레포 환경에서의 개발 경험이 있습니다.",
-              ],
-            ]}
-          />
+          <List contents={["**MonoRepo**", ["모노레포와 멀티레포의 차이점을 이해하고 있습니다.", "Yarn Workspaces 기반 모노레포 환경에서의 개발 경험이 있습니다."]]} />
         </TwoWayLayout>
       </Section>
     </Layout>
