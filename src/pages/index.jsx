@@ -61,6 +61,91 @@ const IndexPage = () => {
           ]}
         />
       </Section>
+      <Section title="커리어">
+        <Project
+          icon={
+            <StaticImage
+              src="../images/Doers.png"
+              alt="회사 로고"
+              className="w-[30px] h-[30px]"
+            />
+          }
+          name="팀 두어스 인턴십"
+          banner={
+            <div className="overflow-hidden w-[638px] h-[350px] rounded-xl">
+              <StaticImage src="../images/DoersBanner.webp" alt="배너 이미지" />
+            </div>
+          }
+          date="2025. 08 ~ 2025. 11"
+          links={[
+            {
+              icon: <Github />,
+              name: "Profile →",
+              href: "https://github.com/yook-gijun",
+            },
+            {
+              icon: (
+                <StaticImage
+                  src="../images/ZVZO.png"
+                  alt="아이콘 이미지"
+                  className="w-[18px] h-[18px]"
+                />
+              ),
+              name: "Service 1 →",
+              href: "https://apps.apple.com/kr/app/zvzo-%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0-%EC%B5%9C%EC%A0%80%EA%B0%80/id6737026124",
+            },
+            {
+              icon: (
+                <StaticImage
+                  src="../images/ZVZO.png"
+                  alt="아이콘 이미지"
+                  className="w-[18px] h-[18px]"
+                />
+              ),
+              name: "Service 2 →",
+              href: "https://apps.apple.com/kr/app/zvzo-for-%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0/id6480408708",
+            },
+          ]}
+          sections={[
+            {
+              title: "개요",
+              content: (
+                <p className="break-words break-keep SPAN leading-7">
+                  빠른 속도로 성장하고 있는 크리에이터 어필리에이트/공구 플랫폼,
+                  ZVZO를 개발하는 팀 두어스에서 약 3달 동안 인턴십을
+                  진행하였습니다.
+                  <br />
+                  <br />
+                  <b>
+                    <ins>사회생활</ins>
+                  </b>
+                  ,{" "}
+                  <b>
+                    <ins>팀원들과의 협업</ins>
+                  </b>{" "}
+                  등 여러 경험을 해볼 수 있는 좋은 기회였습니다.
+                </p>
+              ),
+            },
+            {
+              title: "주요 기여",
+              content: (
+                <List
+                  contents={[
+                    "n8n, neonDB 등을 활용하여 타 서비스의 상품 정보 등을 크롤링하는 루틴 제작",
+                    "유저 서비스의 React Native 버전을 v0.81로 마이그레이션",
+                    "전환율 증가를 위해 크리에이터 서비스 전면 개편 (홈, 상세, 탐색 등)",
+                    "![채널톡 SDK](https://developers.channel.io/en/articles/50cceeab)를 통해 CS에 필요한 고객/상품 정보를 채팅 화면에 가져올 수 있는 스니펫 제작",
+                    [
+                      "해당 과정에서 불편한 ![기존 스니펫 뷰어](https://snippet-builder.channel.io/)를 대체할 목적으로 약 15분만에 바이브 코딩을 통해 ![커스텀 스니펫 뷰어](https://yook-gijun.github.io/)를 제작하고, 팀에 공유",
+                    ],
+                  ]}
+                />
+              ),
+            },
+          ]}
+        />
+      </Section>
       <Section title="프로젝트">
         <Project
           icon={<Repo className="w-[30px] h-[30px]" />}
@@ -288,45 +373,6 @@ const IndexPage = () => {
       </Section>
       <Section title="활동 및 자격" sliceInPrint>
         <TwoWayLayout
-          title="'팀 두어스' 인턴십"
-          date="2025. 08. 25 ~ 2025. 11. 21"
-          tabs={[
-            {
-              icon: <Github />,
-              name: "Profile →",
-              action: "https://github.com/yook-gijun",
-            },
-            {
-              icon: (
-                <StaticImage
-                  src="../images/ZVZO.png"
-                  alt="아이콘 이미지"
-                  className="w-[18px] h-[18px]"
-                />
-              ),
-              name: "Service →",
-              action:
-                "https://play.google.com/store/apps/details?id=com.zvzo.creator&hl=ko",
-            },
-          ]}
-        >
-          <p className="SPAN w-full inline-block break-words break-keep">
-            빠른 성장과 몰입, 그리고 속도를 중시하는{" "}
-            <ins>
-              <b>팀 두어스</b>
-            </ins>{" "}
-            에서 인턴십을 진행하였습니다.
-            <br />
-            <br />약 3달간 진행되었으며 "크리에이터 앱 주요 화면 개편", "MD 팀을
-            위한 상품 탐색 서비스 제작", "채널톡 등의 외부 서비스 연결", "사소한
-            버그 수정" 등을 담당하였습니다.
-            <br />
-            <br />
-            아쉽게도 실제 정규직 전환은 되지 않았으나, 회사 생활을 포함한 여러
-            좋은 경험을 쌓을 수 있었습니다.
-          </p>
-        </TwoWayLayout>
-        <TwoWayLayout
           title="Xquare 보조 서비스 제작"
           date="2023. 09. 28 ~ 2024. 03. 12"
           tabs={[
@@ -358,11 +404,8 @@ const IndexPage = () => {
             엔지니어링에 집중하게 되었습니다.
             <br />
             <br />
-            현재는 서비스 종료되어 사용할 수 없으나,{" "}
-            <ins>
-              <b>20+</b>
-            </ins>
-            명의 사용자가 있었습니다.
+            현재는 서비스 종료되어 통계 조회나 사용이 불가능하지만, 교내에서
+            여러 선생님들과 학생들이 유용하게 사용하였습니다.
           </p>
         </TwoWayLayout>
         <TwoWayLayout
@@ -371,10 +414,10 @@ const IndexPage = () => {
           tabs={[{ name: "우수상(3위)" }]}
         >
           <p className="SPAN w-full inline-block break-words break-keep">
-            정치에 무관심하거나, 정보가 부족한 사람들을 위한 정치 SNS 플랫폼인
-            YEOYA(여야) 서비스를 제작하였습니다.
+            관련된 정보가 부족하거나 무관심한 사람들을 위한 정치 의견 공유
+            플랫폼인 YEOYA(여야) 서비스를 제작하였습니다.
             <br />
-            <br /> 디자인과 프론트엔드 개발에 일부 참여하였으며,{" "}
+            <br /> 서비스 디자인 및 프론트엔드 개발에 참여하였으며,{" "}
             <ins>
               <b>우수상(3위)</b>
             </ins>{" "}
@@ -415,11 +458,8 @@ const IndexPage = () => {
           <List
             contents={[
               "Tanstack-Query에서 Typescript를 통한 Type-Safe 서버 데이터 관리 경험이 있습니다.",
+              "![Serializer](https://www.npmjs.com/package/typescript-json-serializer) 기반의 Response 타입 관리에 대한 경험이 있습니다",
               "Mapped Type, Utility Type, Generic과 같은 특수 타입을 이해하고 있으며, 응용할 수 있습니다.",
-              [
-                "Generic Type을 사용하여 코드의 확장성을 높인 경험이 있습니다.",
-                "Utility Type을 이용하여 인터페이스의 재활용성을 높인 경험이 있습니다.",
-              ],
             ]}
           />
         </TwoWayLayout>
@@ -443,10 +483,19 @@ const IndexPage = () => {
             ]}
           />
         </TwoWayLayout>
+        <TwoWayLayout title="📱 React Native">
+          <List
+            contents={[
+              "React Native CLI 및 Expo를 활용한 개발/빌드/배포 경험이 있습니다.",
+              "React Native의 버전을 마이그레이션해 본 경험이 있습니다",
+              "Codepush, Radon IDE, Android Studio 및 Xcode 등 다양한 도구의 사용법을 이해하고 있습니다",
+            ]}
+          />
+        </TwoWayLayout>
         <TwoWayLayout title="🐙 Git & GitHub">
           <List
             contents={[
-              "Branch, Merge, Rebase 등의 Git 개념을 이해하고 있습니다.",
+              "Branch, Merge, Rebase, Stash 등의 Git 개념을 이해하고 있습니다.",
               "Pull Request를 통해 코드 리뷰를 받고, 진행한 경험이 있습니다. ![실제 경험 →](https://github.com/Check-Data-Out/velog-dashboard-v2-fe/pull/25)",
               "Git Flow와 GIthub Flow의 차이점과 사용 방법을 이해하고 있습니다. ![학습 블로그 →](https://velog.io/@six-standard/브랜치-구조-깔끔하게-관리하기-플로우)",
             ]}
