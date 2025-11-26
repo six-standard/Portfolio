@@ -23,25 +23,10 @@ const IndexPage = () => {
     <Layout className="my-[105px] print:my-[50px] w-[900px] flex flex-col gap-10">
       <Section>
         <h1 className="H1 leading-none">육기준</h1>
-        <div className="flex flex-col gap-5">
-          <h2 className="H2">
-            사람들의 <span className="text-[#448F5E]">불편함</span>을 해결하기
-            위해 노력하는 FE 엔지니어입니다.
-          </h2>
-          <p className="SPAN font-normal leading-7">
-            사용자의 불편함을 해결하는 것을 핵심 가치로 두고 있습니다. <br />
-            더 나은 경험을 제공하기 위해 끊임없이 고민하고 개선합니다.
-            <br />
-            <br />
-            새로운 기술과 피드백을 열린 자세로 받아들이며, 지속적인 학습을 통해
-            시야를 넓힙니다. <br />
-            또한 다른 사람들과 함께 지식을 공유하고 받아들이는 것을 선호합니다.
-            <br />
-            <br />
-            이러한 노력과 꾸준함이 저와 동료들의 성장에 도움이 될 수 있다고
-            믿습니다.
-          </p>
-        </div>
+        <h2 className="H2">
+          사람들의 <span className="text-[#448F5E]">불편함</span>을 해결하기
+          위해 노력하는 FE 엔지니어입니다.
+        </h2>
         <Contacts
           contents={[
             {
@@ -121,9 +106,9 @@ const IndexPage = () => {
                   </b>
                   ,{" "}
                   <b>
-                    <ins>팀원들과의 협업</ins>
+                    <ins>실무 경험</ins>
                   </b>{" "}
-                  등 여러 경험을 해볼 수 있는 좋은 기회였습니다.
+                  등 여러가지를 배울 수 있는 좋은 기회였습니다.
                 </p>
               ),
             },
@@ -147,114 +132,6 @@ const IndexPage = () => {
         />
       </Section>
       <Section title="프로젝트">
-        <Project
-          icon={<Repo className="w-[30px] h-[30px]" />}
-          name="REPO"
-          date="2024. 06 ~ 2025. 01"
-          banner={
-            <StaticImage
-              src="../images/RepoBanner.png"
-              alt="배너 이미지"
-              className="w-[638px] h-[350px] rounded-xl"
-            />
-          }
-          links={[
-            {
-              icon: <Github />,
-              name: "Github →",
-              href: "https://github.com/DSM-Repo/repo",
-            },
-            {
-              icon: <Repo className="w-[17px] h-[17px]" />,
-              name: "Service →",
-              href: "https://www.dsm-repo.com/",
-            },
-          ]}
-          sections={[
-            {
-              title: "개요",
-              content: (
-                <p className="break-words break-keep SPAN leading-7">
-                  대덕소프트마이스터고등학교 학생을 위한 이력서 관리
-                  플랫폼입니다.
-                  <br />
-                  학생들을 위한 간단한 이력서 작성 기능, 선생님들을 위한 피드백
-                  및 자동 변환 기능을 제공하며, 변환된 레주메북은 온라인 뷰어를
-                  통해 기업들에게 제공됩니다. <br />
-                  작성 기간동안{" "}
-                  <b>
-                    <ins>120+</ins>
-                  </b>
-                  명의 학생들의 이력서를 관리하였습니다.
-                </p>
-              ),
-            },
-            {
-              title: "기술 스택",
-              content: (
-                <List
-                  contents={[
-                    "**React** - 컴포넌트 아키텍처로 유지보수성과 재사용성을 높이기 위해 선택",
-                    "**Yarn Workspace** - 설정 파일 및 디자인 시스템의 손쉬운 관리를 위해 선택",
-                    "**React Hook Form** - 입력 렌더링 최적화 및 유지보수의 용이성을 위해 선택",
-                    "**Tanstack-Query & Axios** - 낙관적 업데이트, 콜백 관리 등을 위해 선택",
-                    "**React-PDF & jsPDF** - 간편한 PDF 렌더링 및 다운로드 기능을 위해 선택",
-                  ]}
-                />
-              ),
-            },
-            {
-              title: "기여",
-              content: (
-                <List
-                  contents={[
-                    "작성, 미리보기를 포함한 학생 서비스 개발",
-                    "React-hook-form 라이브러리 도입",
-                    [
-                      "useState 기반으로 Props Drilling이 발생하던 입력 코드 리팩토링 ![실제 코드 →](https://github.com/DSM-Repo/repo/commit/70c8a101f0fa661d88e089c89b6209ae580310ea#diff-80f66ab5d30e7b48bd0159c53624b334ac9c4864fb88e5d9b1738371702140f4)",
-                    ],
-                    "Yarn Workspaces 기반 모노레포 설계 및 구현",
-                    ["Yarn Berry 기반의 중앙 node_modules 폴더 생성"],
-                    "Tanstack-Query 라이브러리 도입",
-                    [
-                      "QueryClient 기반의 낙관적 업데이트를 통해 사용자 경험 향상",
-                    ],
-                  ]}
-                />
-              ),
-            },
-            {
-              title: "트러블슈팅",
-              breakAble: false,
-              content: (
-                <>
-                  <div className="flex flex-col gap-1">
-                    <h3 className="H3">
-                      미리보기 PDF 다운로드시 Javascript 동작 멈춤
-                    </h3>
-                    <List
-                      contents={[
-                        "**원인**: base64 형태의 이미지를 PDF에 추가하는 jsPDF 라이브러리의 코드가 메인 스레드의 호출 스택을 오래 점유하여 변환하는 동안 쌓인 함수들의 실행이 지연되는 문제 발생",
-                        "**해결 방법**: jsPDF의 PDF 변환 코드를 스레드에서 동작하는 Web Worker로 옮기고, 메시지를 통해 blob 형태로 변환된 PDF 파일을 받는 식으로 수정하여 해결.",
-                        "**배운 점**: Web Worker의 개념과 동작 방식, Blob 개념, 메인 스레드가 실제로 오래 점유될 경우에 어떤 일이 발생하는지에 대해 배울 수 있었음.",
-                      ]}
-                    />
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <h3 className="H3">특정 운영체제에서의 PDF 화질 저하</h3>
-                    <List
-                      contents={[
-                        "**원인**: 현재 사용중인 React-PDF의 DPI 값은 72 고정인데, Windows와 Linux에서는 기본 96 DPI를 사용하기 때문에 운영체제의 DPI에 맞추기 위해 PDF가 뭉개져서 표시되는 문제 발생.",
-                        "**해결 방법**: PDF Canvas의 Scale 값을 3으로 고정한 상황에서, CSS의 Transform Scale 옵션을 통해 크기를 원래대로 돌리면서 내부 픽셀을 압축하여 DPI를 강제로 올리는 방식으로 해결.",
-                        "**배운 점**: 운영체제의 화면 표시 방식에 따라 페이지의 내용물이 다를 수 있다는 점과, 픽셀 압축에 대해서 배울 수 있었음.",
-                      ]}
-                    />
-                  </div>
-                </>
-              ),
-            },
-          ]}
-        />
         <Project
           icon={<VelogDashboard className="w-[30px] h-[30px]" />}
           name="Velog Dashboard"
@@ -370,44 +247,170 @@ const IndexPage = () => {
             },
           ]}
         />
-      </Section>
-      <Section title="활동 및 자격" sliceInPrint>
-        <TwoWayLayout
-          title="Xquare 보조 서비스 제작"
-          date="2023. 09. 28 ~ 2024. 03. 12"
-          tabs={[
+        <Project
+          icon={<Repo className="w-[30px] h-[30px]" />}
+          name="REPO"
+          date="2024. 06 ~ 2025. 01"
+          banner={
+            <StaticImage
+              src="../images/RepoBanner.png"
+              alt="배너 이미지"
+              className="w-[638px] h-[350px] rounded-xl"
+            />
+          }
+          links={[
             {
               icon: <Github />,
               name: "Github →",
-              action: "https://github.com/five-standard/Xquare-Extension",
+              href: "https://github.com/DSM-Repo/repo",
+            },
+            {
+              icon: <Repo className="w-[17px] h-[17px]" />,
+              name: "Service →",
+              href: "https://www.dsm-repo.com/",
+            },
+          ]}
+          sections={[
+            {
+              title: "개요",
+              content: (
+                <p className="break-words break-keep SPAN leading-7">
+                  대덕소프트마이스터고등학교 학생을 위한 이력서 관리
+                  플랫폼입니다.
+                  <br />
+                  학생들을 위한 간단한 이력서 작성 기능, 선생님들을 위한 피드백,
+                  온라인 레주메 도서관 기능을 제공하며, 온라인 레주메 도서관
+                  기능을 통해 기업에게 바로 이력서를 공유할 수 있습니다 <br />
+                  작성 기간동안{" "}
+                  <b>
+                    <ins>120+</ins>
+                  </b>
+                  명의 학생들의 이력서를 관리하였습니다.
+                </p>
+              ),
+            },
+            {
+              title: "기술 스택",
+              content: (
+                <List
+                  contents={[
+                    "**React** - 컴포넌트 아키텍처로 유지보수성과 재사용성을 높이기 위해 선택",
+                    "**Yarn Workspace** - 설정 파일 및 디자인 시스템의 손쉬운 관리를 위해 선택",
+                    "**React Hook Form** - 입력 렌더링 최적화 및 유지보수의 용이성을 위해 선택",
+                    "**Tanstack-Query & Axios** - 낙관적 업데이트, 콜백 관리 등을 위해 선택",
+                    "**React-PDF & jsPDF** - 간편한 PDF 렌더링 및 다운로드 기능을 위해 선택",
+                  ]}
+                />
+              ),
+            },
+            {
+              title: "기여",
+              content: (
+                <List
+                  contents={[
+                    "작성, 미리보기를 포함한 학생 서비스 개발",
+                    "React-hook-form 라이브러리 도입",
+                    [
+                      "useState 기반으로 Props Drilling이 발생하던 입력 코드 리팩토링 ![실제 코드 →](https://github.com/DSM-Repo/repo/commit/70c8a101f0fa661d88e089c89b6209ae580310ea#diff-80f66ab5d30e7b48bd0159c53624b334ac9c4864fb88e5d9b1738371702140f4)",
+                    ],
+                    "Yarn Workspaces 기반 모노레포 설계 및 구현",
+                    ["Yarn Berry 기반의 중앙 node_modules 폴더 생성"],
+                    "Tanstack-Query 라이브러리 도입",
+                    [
+                      "QueryClient 기반의 낙관적 업데이트를 통해 사용자 경험 향상",
+                    ],
+                  ]}
+                />
+              ),
+            },
+            {
+              title: "트러블슈팅",
+              content: (
+                <>
+                  <div className="flex flex-col gap-1">
+                    <h3 className="H3">
+                      미리보기 PDF 다운로드시 Javascript 동작 멈춤
+                    </h3>
+                    <List
+                      contents={[
+                        "**원인**: base64 형태의 이미지를 PDF에 추가하는 jsPDF 라이브러리의 코드가 메인 스레드의 호출 스택을 오래 점유하여 변환하는 동안 쌓인 함수들의 실행이 지연되는 문제 발생",
+                        "**해결 방법**: jsPDF의 PDF 변환 코드를 스레드에서 동작하는 Web Worker로 옮기고, 메시지를 통해 blob 형태로 변환된 PDF 파일을 받는 식으로 수정하여 해결.",
+                        "**배운 점**: Web Worker의 개념과 동작 방식, Blob 개념, 메인 스레드가 실제로 오래 점유될 경우에 어떤 일이 발생하는지에 대해 배울 수 있었음.",
+                      ]}
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <h3 className="H3">특정 운영체제에서의 PDF 화질 저하</h3>
+                    <List
+                      contents={[
+                        "**원인**: 현재 사용중인 React-PDF의 DPI 값은 72 고정인데, Windows와 Linux에서는 기본 96 DPI를 사용하기 때문에 운영체제의 DPI에 맞추기 위해 PDF가 뭉개져서 표시되는 문제 발생.",
+                        "**해결 방법**: PDF Canvas의 Scale 값을 3으로 고정한 상황에서, CSS의 Transform Scale 옵션을 통해 크기를 원래대로 돌리면서 내부 픽셀을 압축하여 DPI를 강제로 올리는 방식으로 해결.",
+                        "**배운 점**: 운영체제의 화면 표시 방식에 따라 페이지의 내용물이 다를 수 있다는 점과, 픽셀 압축에 대해서 배울 수 있었음.",
+                      ]}
+                    />
+                  </div>
+                </>
+              ),
+            },
+          ]}
+        />
+        {/* <Project
+          icon={
+            <StaticImage
+              src="../images/Xquare.webp"
+              alt="아이콘 이미지"
+              className="w-[30px] h-[30px]"
+            />
+          }
+          name="Xquare Extension"
+          date="2023. 09 ~ 2024. 03"
+          banner={
+            <StaticImage
+              src="../images/XquareBanner.webp"
+              alt="배너 이미지"
+              className="w-[638px] h-[350px] rounded-xl"
+            />
+          }
+          links={[
+            {
+              icon: <Github />,
+              name: "Github →",
+              href: "https://github.com/five-standard/Xquare-Extension",
             },
             {
               icon: (
                 <StaticImage
-                  src="../images/Xquare.png"
+                  src="../images/Xquare.webp"
                   alt="아이콘 이미지"
                   className="w-[18px] h-[18px]"
                 />
               ),
               name: "Service →",
-              action:
-                "https://chromewebstore.google.com/detail/xquare/apjpfknndginnahobenblkdfbibckcom?hl=ko",
+              href: "https://chromewebstore.google.com/detail/xquare/apjpfknndginnahobenblkdfbibckcom?hl=ko",
             },
           ]}
-        >
-          <p className="SPAN w-full inline-block break-words break-keep">
-            (구) 교내 학교생활 관리 서비스인 Xquare를 윈도우 환경에서 사용할
-            방법이 없어 직접 확장 프로그램 형태의 보조 클라이언트를
-            개발하였습니다.
-            <br />
-            실제로 처음 불편함을 해결한 경험이며, 이 때부터 프론트엔드
-            엔지니어링에 집중하게 되었습니다.
-            <br />
-            <br />
-            현재는 서비스 종료되어 통계 조회나 사용이 불가능하지만, 교내에서
-            여러 선생님들과 학생들이 유용하게 사용하였습니다.
-          </p>
-        </TwoWayLayout>
+          sections={[
+            {
+              title: "개요",
+              content: (
+                <p className="break-words break-keep SPAN leading-7">
+                  (구) 교내 학교생활 관리 서비스인 Xquare를 윈도우 환경에서
+                  사용할 방법이 없어 직접 확장 프로그램 형태의 보조 클라이언트를
+                  개발하였습니다.
+                  <br />
+                  실제로 처음 불편함을 해결한 경험이며, 이 때부터 프론트엔드
+                  엔지니어링에 집중하게 되었습니다.
+                  <br />
+                  <br />
+                  현재는 서비스 종료되어 통계 조회나 사용이 불가능하지만,
+                  교내에서 여러 선생님들과 학생들이 유용하게 사용하였습니다.
+                </p>
+              ),
+            },
+          ]}
+        /> */}
+      </Section>
+      <Section title="활동 및 자격" sliceInPrint>
         <TwoWayLayout
           title="마이스터고 교내 해커톤"
           date="2024. 07. 18 ~ 2024. 07. 20"
