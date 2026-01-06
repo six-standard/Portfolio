@@ -205,7 +205,7 @@ const IndexPage = () => {
                   contents={[
                     "**NextJS** - SEO 설정의 용이성, SSR을 통한 사용성 강화 등을 위해 선택",
                     "**Google Analytics & Sentry** - 서비스 사용량 모니터링 및 버그의 빠른 탐지를 위해 선택",
-                    "**Jest** - 터미널 내부에서 돌아가는 테스트이며, NodeJS 백엔드와의 통합 테스트를 위해 선택",
+                    "**Jest, Cypress** - 유명한 테스트 도구들, 빠른 테스트 제작 및 백엔드 테스트와의 통합을 통해 선택 (Jest)",
                     "**MSW** - 반복된 Fetch 모킹을 줄이고, 재활용하기 용이한 모킹 API를 만들기 위해 선택",
                     "**Tanstack-Query & Fetch** - Axios보다 커스텀이 쉬우며, NextJS과의 연동을 위해 선택",
                     "**React-ChartJS-2** - 오래된 만큼 거대한 커뮤니티와 안정성의 보장을 위해 선택",
@@ -219,10 +219,14 @@ const IndexPage = () => {
                 <List
                   contents={[
                     "자동 로그인 및 정보 삽입을 지원하는 ![확장 프로그램 개발](https://github.com/Check-Data-Out/velog-dashboard-v2-extension)",
-                    "Sentry 및 Google Analytics 도입",
+                    "Google Analytics 및 Sentry 도입",
                     [
                       "사용자의 제보를 통한 빠른 버그, 배포 주기 문제 수집",
                       "다른 사용자가 경험하기 전 문제 해결 가능",
+                    ],
+                    "NextJS Opengraph 기능을 활용한 Velog 프로필 뱃지 제작",
+                    [
+                      "원래 SVG로 진행하려 했으나, 반응형 및 CSS 미지원 등 개발에 어려움이 있어 컴포넌트를 그대로 이미지화할 수 있는 Opengraph(satori) 활용",
                     ],
                   ]}
                 />
